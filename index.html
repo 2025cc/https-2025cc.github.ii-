@@ -2,25 +2,32 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>B社社区 - 软件分享平台</title>
     <style>
+        /* 重置样式（兼容旧浏览器） */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: "微软雅黑", sans-serif;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            font-family: "微软雅黑", "Microsoft YaHei", sans-serif;
         }
         body {
             background-color: #f8f9fa;
             color: #333;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
         }
         /* 顶部横幅 */
         .header-banner {
             background: linear-gradient(120deg, #667eea, #764ba2);
             color: white;
-            padding: 40px 20px;
+            padding: 40px 5%;
             text-align: center;
+            width: 100%;
         }
         .header-banner .icon {
             width: 80px;
@@ -28,15 +35,20 @@
             border-radius: 50%;
             margin-bottom: 15px;
             border: 3px solid rgba(255,255,255,0.8);
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
         }
         .header-banner h1 {
             font-size: 28px;
             margin-bottom: 10px;
+            line-height: 1.2;
         }
         .header-banner p {
             font-size: 16px;
             opacity: 0.9;
             margin-bottom: 20px;
+            line-height: 1.5;
         }
         .tag {
             display: inline-block;
@@ -50,7 +62,8 @@
         .container {
             max-width: 700px;
             margin: 30px auto;
-            padding: 0 20px;
+            padding: 0 5%;
+            width: 100%;
         }
         /* 分享板块 */
         .share-card {
@@ -60,11 +73,13 @@
             margin-bottom: 25px;
             box-shadow: 0 3px 12px rgba(0,0,0,0.05);
             text-align: center;
+            -webkit-box-shadow: 0 3px 12px rgba(0,0,0,0.05);
         }
         .share-card h2 {
             font-size: 22px;
             color: #667eea;
             margin-bottom: 15px;
+            line-height: 1.2;
         }
         .share-card p {
             font-size: 15px;
@@ -87,6 +102,11 @@
             cursor: pointer;
             text-decoration: none;
             display: inline-block;
+            width: 100%;
+            -webkit-appearance: none;
+        }
+        .sub-btn:active {
+            background: #e2e8f0;
         }
         /* 社群板块 */
         .group-card {
@@ -101,6 +121,7 @@
             font-size: 20px;
             color: #e53e3e;
             margin-bottom: 10px;
+            line-height: 1.2;
         }
         .group-card .qq-group {
             font-size: 18px;
@@ -109,23 +130,31 @@
             margin: 10px 0;
             letter-spacing: 2px;
         }
+        .group-card p {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #666;
+        }
         /* 特色说明 */
         .feature-list {
             background: white;
             border-radius: 10px;
             padding: 25px;
             box-shadow: 0 3px 12px rgba(0,0,0,0.05);
+            -webkit-box-shadow: 0 3px 12px rgba(0,0,0,0.05);
         }
         .feature-list h3 {
             font-size: 18px;
             color: #333;
             margin-bottom: 15px;
             text-align: center;
+            line-height: 1.2;
         }
         .feature-item {
             display: flex;
             align-items: flex-start;
             margin-bottom: 12px;
+            line-height: 1.5;
         }
         .feature-item::before {
             content: "✓";
@@ -138,42 +167,11 @@
             font-size: 14px;
             color: #666;
         }
-    </style>
-</head>
-<body>
-    <!-- 顶部横幅（添加图标） -->
-    <div class="header-banner">
-        <img src="icon.png" alt="B社社区图标" class="icon">
-        <span class="tag">安卓专属 · 资源共享</span>
-        <h1>B社社区 - 软件分享平台</h1>
-        <p>分享你的好软件，发现更多实用工具，赶紧加入我们！</p>
-    </div>
-
-    <div class="container">
-        <!-- 核心引导板块 -->
-        <div class="share-card">
-            <h2>立即加入，开启分享之旅</h2>
-            <p>这里有海量优质软件资源，支持安卓全机型，欢迎分享你的珍藏好物，与千万用户一起交流！</p>
-            <div class="btn-group">
-                <a href="https://link3.cc/chenbeiming" class="sub-btn" target="_blank">下载 B社App（安卓专属）</a>
-            </div>
-        </div>
-
-        <!-- QQ群引导板块 -->
-        <div class="group-card">
-            <h3>加入官方QQ群，获取更多福利</h3>
-            <p>群内每日分享优质软件，及时解答使用问题，结交同好伙伴！</p>
-            <div class="qq-group">170352922</div>
-            <p>复制群号搜索加入，备注“软件分享”优先通过~</p>
-        </div>
-
-        <!-- 平台特色 -->
-        <div class="feature-list">
-            <h3>平台亮点</h3>
-            <div class="feature-item">
-                <span>专注安卓资源分享，所有软件适配主流安卓机型，安全可用</span>
-            </div>
-            <div class="feature-item">
-                <span>用户自主分享优质软件，涵盖工具、娱乐、效率等各类应用</span>
-            </div>
-            <div class="featu
+        /* 适配小屏幕 */
+        @media (max-width: 480px) {
+            .header-banner h1 {
+                font-size: 24px;
+            }
+            .share-card h2 {
+                font-size: 20px;
+       
